@@ -49,7 +49,7 @@ namespace dictionary
             if (count > 0)
             {
                 double average = (double)sum / count;
-                Console.WriteLine($"Средний балл: {average:F1}");
+                Console.WriteLine($"Средний балл: {average}");
             }
         }
     }
