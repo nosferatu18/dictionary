@@ -51,39 +51,6 @@ namespace dictionary
                 double average = (double)sum / count;
                 Console.WriteLine($"Средний балл: {average:F1}");
             }
-
-            // Добавление новой оценки
-            Console.WriteLine("Хотите добавить новую оценку? (да/нет):");
-            string answer = Console.ReadLine();
-
-            if (answer == "да")
-            {
-                Console.WriteLine("Введите числовую оценку:");
-                int newNum = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Введите текстовое описание:");
-                string newText = Console.ReadLine();
-
-                grades.Add(newNum, newText);
-                Console.WriteLine($"Оценка {newNum} -> \"{newText}\" добавлена в словарь");
-            }
-
-            // Обратный перевод
-            Console.WriteLine("Введите текстовую оценку:");
-            string search = Console.ReadLine();
-            bool found = false;
-
-            foreach (var grade in grades)
-            {
-                if (grade.Value == search)
-                {
-                    Console.WriteLine($"Числовая оценка: {grade.Key}");
-                    found = true;
-                }
-            }
-
-            if (!found)
-                Console.WriteLine("Такая оценка не найдена");
         }
     }
 }
