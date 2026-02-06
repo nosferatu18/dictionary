@@ -31,7 +31,7 @@ namespace dictionary
 
             for (int i = 0; i < parts.Length; i++)
             {
-                int num = int.Parse(parts[i]);
+                int num = Convert.ToInt32(parts[i]);
 
                 if (grades.ContainsKey(num))
                 {
